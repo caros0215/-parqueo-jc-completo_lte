@@ -1,0 +1,22 @@
+/* Aside.css */
+.main-sidebar {
+  transition: width 0.3s;
+  padding-top: 0px;
+}
+
+
+
+.sidebar-closed {
+  width: 80px; /* Ancho del sidebar cerrado */
+}
+
+.image{
+  display: block;
+  max-width: 84%;
+  height: auto;
+
+}
+
+.navbar {
+    border-radius: 0px;
+}

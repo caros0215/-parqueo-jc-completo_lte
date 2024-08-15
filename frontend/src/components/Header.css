@@ -1,0 +1,23 @@
+/* Header.css */
+.main-header {
+  transition: margin-left 0.3s;
+}
+
+/* Content wrapper and Footer CSS adjustments */
+.content-wrapper {
+  padding: 15px;
+}
+
+.footer {
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .content-wrapper,
+  body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .main-footer,
+  body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .main-header {
+      transition: margin-left .3s ease-in-out;
+      margin-left: 3px;
+      padding-bottom: 5%;
+  }
+}
