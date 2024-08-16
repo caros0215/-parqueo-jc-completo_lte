@@ -1,22 +1,125 @@
 /* Aside.css */
+
 .main-sidebar {
   transition: width 0.3s;
-  padding-top: 0px;
+  padding-top: 0;
+  width: 251px;
+  z-index: 810;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  border-right: 2px solid #e3aa00 !important;
+}
+
+.brand-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  min-height: 75px;
+  border-bottom: 2px solid #e3aa00 !important;
+  background-color: #000000;
 }
 
 
-
-.sidebar-closed {
-  width: 80px; /* Ancho del sidebar cerrado */
-}
-
-.image{
-  display: block;
+.brand-link .image {
   max-width: 84%;
   height: auto;
-
+  transition: all 0.3s;
 }
 
+
+.logo-closed {
+  margin-bottom: 0%;
+  margin-top: -4% !important;
+}
+.brand-link .brand-image {
+  float: left;
+  line-height: .8;
+  margin-left: .8rem;
+  margin-right: .5rem;
+  margin-top: -3px;
+  max-height: 69px;
+  width: auto;
+}
+
+.brand-image .logo-open {
+  max-height: 33px;
+  width: auto;
+}
+.sidebar-closed {
+  width: 80px;
+}
+
+.sidebar-closed .brand-link .image {
+  max-width: 50px;
+}
+
+.sidebar {
+  flex-grow: 1;
+  overflow-y: auto;
+  background-color: #000000;
+}
+
+.nav-sidebar {
+  padding-top: 1rem;
+}
+
+.nav-sidebar .nav-item {
+  width: 100%;
+}
+
+.nav-sidebar .nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.nav-sidebar .nav-link i {
+  width: 2rem;
+  text-align: center;
+  margin-right: 0.5rem;
+}
+
+.nav-sidebar .nav-link p {
+  margin-bottom: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.sidebar-closed .nav-sidebar .nav-link p {
+  display: none;
+}
+
+.sidebar-closed .nav-sidebar .nav-link:hover p {
+  display: block;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #343a40;
+  border-radius: 3px;
+  z-index: 1000;
+  white-space: nowrap;
+}
+
+/* Ajustes adicionales para mejorar la apariencia en modo cerrado */
+.sidebar-closed .nav-sidebar .nav-item {
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar-closed .nav-sidebar .nav-link {
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+
+.sidebar-closed .nav-sidebar .nav-link i {
+  margin-right: 0;
+}
+
+/* Navbar ajuste */
 .navbar {
-    border-radius: 0px;
+  border-radius: 0;
 }
