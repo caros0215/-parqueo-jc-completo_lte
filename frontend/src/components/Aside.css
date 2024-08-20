@@ -1,16 +1,22 @@
 /* Aside.css */
+@import url('https://fonts.googleapis.com/css?family=Anton');
 
 .main-sidebar {
   transition: width 0.3s;
   padding-top: 0;
-  width: 251px;
+  width: 222px;
   z-index: 810;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100vh !important;
   border-right: 2px solid #e3aa00 !important;
 }
 
+
+.nav-link{
+  color: #fff;
+    background-color: #333;
+}
 .brand-link {
   display: flex;
   justify-content: center;
@@ -19,6 +25,12 @@
   min-height: 75px;
   border-bottom: 2px solid #e3aa00 !important;
   background-color: #000000;
+}
+
+.nav-icon{
+  color: #e3aa00;
+  text-align: left;
+  margin-left: 2%;
 }
 
 
@@ -32,6 +44,7 @@
 .logo-closed {
   margin-bottom: 0%;
   margin-top: -4% !important;
+  max-width: 112%;
 }
 .brand-link .brand-image {
   float: left;
@@ -48,7 +61,7 @@
   width: auto;
 }
 .sidebar-closed {
-  width: 80px;
+  width: 52px;
 }
 
 .sidebar-closed .brand-link .image {
@@ -62,17 +75,22 @@
 }
 
 .nav-sidebar {
-  padding-top: 1rem;
+  padding-top: 0rem;
 }
 
 .nav-sidebar .nav-item {
   width: 100%;
 }
 
+.skin-blue .sidebar-menu>li:hover>a, .skin-blue .sidebar-menu>li.active>a, .skin-blue .sidebar-menu>li.menu-open>a {
+  color: #fff;
+  background: #1e282c;
+}
+
 .nav-sidebar .nav-link {
   display: flex;
   align-items: center;
-  padding: 0.5rem 1rem;
+  margin-left: -1%;
 }
 
 .nav-sidebar .nav-link i {
@@ -80,12 +98,23 @@
   text-align: center;
   margin-right: 0.5rem;
 }
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+  color: #ffffff !important;
+  background-color: #1e282c;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+  border-top-color: transparent;
+}
 
 .nav-sidebar .nav-link p {
   margin-bottom: 0;
   transition: opacity 0.3s, visibility 0.3s;
-}
+  color: #b8c7ce;
+  font-family: 'Anton';
+  font-size: 14px;
 
+}
 .sidebar-closed .nav-sidebar .nav-link p {
   display: none;
 }
