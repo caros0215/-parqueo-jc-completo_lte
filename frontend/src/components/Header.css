@@ -6,6 +6,7 @@
 /* Content wrapper and Footer CSS adjustments */
 .content-wrapper {
   padding: 15px;
+  margin-top: -2%;
 }
 
 .footer {
@@ -27,7 +28,7 @@
   body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) .main-header {
     transition: margin-left .3s ease-in-out;
     margin-left: -28px;
-    padding-bottom: 34.5px;
+    padding-bottom: 33.5px;
     background-color: #000000;
     border-bottom: 2px solid #e3aa00;
   }

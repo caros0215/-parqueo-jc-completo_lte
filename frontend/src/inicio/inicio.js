@@ -5,7 +5,7 @@ import CajasSuperiores from './cajas-superiores';
 import GraficoVentas from './reportes/grafico-ventas';
 import ProductosMasVendidos from './reportes/ProductosMasVendidos';
 import ProductosRecientes from './productos-recientes';
-import Header from '../components/Header';
+import './inicio.css';
 
 const Tablero = () => {
 
@@ -25,11 +25,11 @@ const Tablero = () => {
       <section className="content-header" style={{ color: 'white', backgroundColor: 'black' }}>
         <h1 className="tablero-title">
           Tablero
-          <small style={{ color: 'white' }}>Panel de Control</small>
+          <small className='panel' style={{ color: 'white' }}>Panel de Control</small>
         </h1>
 
         <ol className="breadcrumb">
-          <li><a href="inicio"><i className="fa fa-dashboard"></i> Inicio</a></li>
+          <li><a className='inicio' href="inicio"><i className="fa fa-dashboard"></i> Inicio</a></li>
           <li className="active" style={{ color: 'white' }}>Tablero</li>
         </ol>
       </section>
