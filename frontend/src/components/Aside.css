@@ -5,18 +5,18 @@
   transition: width 0.3s;
   padding-top: 0;
   width: 222px;
-  z-index: 810;
+  z-index: 810; /* Ajusta el z-index aquí */
   display: flex;
   flex-direction: column;
   height: 100vh !important;
   border-right: 2px solid #e3aa00 !important;
 }
 
-
-.nav-link{
+.nav-link {
   color: #fff;
-    background-color: #333;
+  background-color: #333;
 }
+
 .brand-link {
   display: flex;
   justify-content: center;
@@ -27,12 +27,11 @@
   background-color: #000000;
 }
 
-.nav-icon{
+.nav-icon {
   color: #e3aa00;
   text-align: left;
   margin-left: 2%;
 }
-
 
 .brand-link .image {
   max-width: 84%;
@@ -40,12 +39,12 @@
   transition: all 0.3s;
 }
 
-
 .logo-closed {
   margin-bottom: 0%;
   margin-top: -4% !important;
   max-width: 112%;
 }
+
 .brand-link .brand-image {
   float: left;
   line-height: .8;
@@ -60,6 +59,7 @@
   max-height: 33px;
   width: auto;
 }
+
 .sidebar-closed {
   width: 52px;
 }
@@ -80,17 +80,15 @@
 
 .nav-sidebar .nav-item {
   width: 100%;
-}
-
-.skin-blue .sidebar-menu>li:hover>a, .skin-blue .sidebar-menu>li.active>a, .skin-blue .sidebar-menu>li.menu-open>a {
-  color: #fff;
-  background: #1e282c;
+  position: relative;
 }
 
 .nav-sidebar .nav-link {
   display: flex;
   align-items: center;
-  margin-left: -1%;
+  padding: 0.5rem 1rem;
+  color: #b8c7ce;
+  transition: all 0.3s ease;
 }
 
 .nav-sidebar .nav-link i {
@@ -98,42 +96,14 @@
   text-align: center;
   margin-right: 0.5rem;
 }
-.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
-  color: #ffffff !important;
-  background-color: #1e282c;
-}
-
-.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
-  border-top-color: transparent;
-}
 
 .nav-sidebar .nav-link p {
   margin-bottom: 0;
-  transition: opacity 0.3s, visibility 0.3s;
-  color: #b8c7ce;
   font-family: 'Anton';
   font-size: 14px;
-
-}
-.sidebar-closed .nav-sidebar .nav-link p {
-  display: none;
 }
 
-.sidebar-closed .nav-sidebar .nav-link:hover p {
-  display: block;
-  position: absolute;
-  left: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-left: 10px;
-  padding: 5px 10px;
-  background-color: #343a40;
-  border-radius: 3px;
-  z-index: 1000;
-  white-space: nowrap;
-}
-
-/* Ajustes adicionales para mejorar la apariencia en modo cerrado */
+/* Estilos para el menú cerrado */
 .sidebar-closed .nav-sidebar .nav-item {
   display: flex;
   justify-content: center;
@@ -142,10 +112,43 @@
 .sidebar-closed .nav-sidebar .nav-link {
   justify-content: center;
   padding: 0.5rem 0;
+  width: 52px;
 }
 
 .sidebar-closed .nav-sidebar .nav-link i {
   margin-right: 0;
+}
+
+.sidebar-closed .nav-sidebar .nav-link p {
+  display: none;
+}
+
+/* Nuevos estilos para el hover en modo cerrado */
+.sidebar-closed .nav-sidebar .nav-item:hover {
+  z-index: 9999; /* Asegura que el ítem en hover quede por encima del sidebar */
+  position: relative;
+}
+
+.sidebar-closed .nav-sidebar .nav-item:hover .nav-link {
+  width: 222px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #1e282c;
+  justify-content: flex-start;
+  padding: 0.5rem 1rem;
+}
+
+.sidebar-closed .nav-sidebar .nav-item:hover .nav-link p {
+  display: inline;
+  margin-left: 0.5rem;
+}
+
+/* Ajuste para el ítem activo */
+.nav-sidebar .nav-item.active .nav-link,
+.nav-sidebar .nav-item:hover .nav-link {
+  background-color: #1e282c;
+  color: #ffffff;
 }
 
 /* Navbar ajuste */
